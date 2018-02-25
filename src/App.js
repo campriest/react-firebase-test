@@ -4,7 +4,13 @@ import './App.css';
 import firebase from 'firebase';
 import Main from './Main.js';
 import List from './List.js';
+import Head from './Head.js';
 
+
+const mainStyle = {
+
+  position:'fixed'
+}
 class App extends Component {
 
 constructor(props){
@@ -24,12 +30,9 @@ render() {
     return (
       <div>
 
-        <List db = {firebase}/> 
-
-        <Main db = {firebase}/>
-
-
-
+        <List db = {firebase}/>
+        <Main style = {mainStyle} db = {firebase}/>
+        <Head/>
       </div>
     );
   }
